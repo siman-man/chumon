@@ -1,8 +1,9 @@
 Chumon::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/agreement" 
-  get "static_pages/help"
   resources :products
+
+  root 'static_pages#home'
+  match '/help',      to: 'static_pages#help',      via: 'get'
+  match '/agreement', to: 'static_pages#agreement', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
