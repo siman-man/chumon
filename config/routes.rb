@@ -1,4 +1,6 @@
 Chumon::Application.routes.draw do
+  get "order_details/index"
+  get "order_details/show"
   resources :products
 
   root 'static_pages#home'
