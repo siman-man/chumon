@@ -11,7 +11,7 @@ class Product < ActiveRecord::Base
 
   class << self
     def sales_ranking(limit = 10)
-      all.sort_by{|re| -re.sales_count }.take(limit)
+      all.sort_by{|re| -(re.price * re.sales_count) }.take(limit)
     end
   end
 end
