@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 1.2'
 
 group :development do
   gem 'pry-rails'
+  gem 'hirb-unicode'
 end
 
 group :doc do
